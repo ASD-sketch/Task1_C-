@@ -80,11 +80,6 @@ namespace Task1C_
 
 
 
-            foreach (string c in car)
-            {
-                Console.WriteLine(c);
-            }
-            Console.WriteLine($"Total number of cars: {car.Length}");
 
         }
     }
