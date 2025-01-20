@@ -226,6 +226,7 @@ namespace Task2
             //    Console.WriteLine($"The middle value is: {middleValue}");
 
             //    Console.WriteLine($"The middle value is: {middleValue}");
+            //    Console.WriteLine($"The middle value is: {middleValue}");
 
 
         }
