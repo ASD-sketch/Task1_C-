@@ -201,12 +201,12 @@ namespace Task2
             //Console.Write("Enter the third number: ");
             //string input3 = Console.ReadLine();
 
-          
+
             //    int num1 = Convert.ToInt32(input1);
             //    int num2 = Convert.ToInt32(input2);
             //    int num3 = Convert.ToInt32(input3);
 
-               
+
             //    int middleValue;
 
             //    if ((num1 > num2 && num1 < num3) || (num1 > num3 && num1 < num2))
@@ -222,12 +222,12 @@ namespace Task2
             //        middleValue = num3;
             //    }
 
-               
+
             //    Console.WriteLine($"The middle value is: {middleValue}");
-            
-           
+
+            //    Console.WriteLine($"The middle value is: {middleValue}");
 
 
         }
-}
+    }
 }
