@@ -42,31 +42,21 @@ namespace task._3
         }
 
 
-        public static string Prime(int num1, int num2)
+        public static void prime()
         {
-            string primes = "";
-            for (int i = num1; i <= num2; i++)
+            int x = 25;
+            for (int i = 2; i < x / 2; i++)
             {
-                if (IsPrime(i))
+                if (x % i == 0)
                 {
-                    primes += i + " ";
+                    Console.WriteLine("Not Prime");
+                    return;
                 }
-            }
-            return primes;
-        }
-        public static bool IsPrime(int number)
-        {
-            if (number <= 1)
-                return false;
 
-            for (int i = 2; i * i <= number; i++)
-            {
-                if (number % i == 0)
-                    return false;
             }
-            return true;
+            Console.WriteLine("prime");
         }
-
+      
 
         static int largest(int[] numbers)
         {
@@ -107,17 +97,46 @@ namespace task._3
         class Room
         {
             
-            public int roomNumber;
-            public string roomType;
-            public double pricePerNight;
-            public bool isBooked;
-
             
-            public const string HotelName = "Grand Stay Hotel";
+            
+          
+            
+            public int roomNumber { get; set; }
+            public String roomType { get; set; }
+            public int pricePerNight { get; set; }
+            public bool isBooked { get; set; }
+
+            private static readonly string constantValue = "hotal";
+            public static string ConstantProperty
+            {
+                get { return constantValue; }
+            }
+
+
+            public Room() 
+            {
+                Console.WriteLine("Constructor");
+            }
+
+            public Room(int roomNumber,String roomType,int pricePerNight,bool isBooked)
+            {
+                this.roomNumber = roomNumber;
+                this.roomType = roomType;
+                this.pricePerNight = pricePerNight;
+                this.isBooked = isBooked;
+            }
+
+
+            ~Room()
+            {
+                Console.WriteLine("Destructor");
+            }
+
+
 
             public void PrintRoomDetails()
             {
-                Console.WriteLine($"Hotel: {HotelName}");
+                Console.WriteLine($"Hotel: {constantValue}");
                 Console.WriteLine($"Room Number: {roomNumber}");
                 Console.WriteLine($"Room Type: {roomType}");
                 Console.WriteLine($"Price Per Night: ${pricePerNight}");
@@ -132,81 +151,87 @@ namespace task._3
 
         static void Main(string[] args)
         {
-            //1
-            //Console.WriteLine(OddEven(Convert.ToInt32(Console.ReadLine()))); 
+          // // 1
+          //  Console.WriteLine(OddEven(Convert.ToInt32(Console.ReadLine())));
 
 
-            //2
-            //int[] arr = new int[5];
-            //for (int i = 0; i < 5; i++)
+          // // 2
+          //  int[] arr = new int[5];
+          //  for (int i = 0; i < 5; i++)
+          //  {
+          //      arr[i] = Convert.ToInt32(Console.ReadLine());
+          //  }
+          //  Console.WriteLine(smallest(arr));
+
+
+
+          ////  3
+          //  int num = Convert.ToInt32(Console.ReadLine());
+          //  Console.WriteLine(fac(num));
+
+
+
+
+
+          ////  4
+          //  prime();
+
+
+
+
+          // // 5
+          //  int[] numbers = new int[5];
+          //  for (int i = 0; i < numbers.Length; i++)
+          //  { numbers[i] = Convert.ToInt32(Console.ReadLine()); }
+
+          //  Console.WriteLine(largest(numbers));
+
+
+
+          // // 6
+          //  pattern();
+
+
+
+
+
+           // 7
+
+
+
+            //Room[] rooms = new Room[2];
+            //for (int i = 0; i < rooms.Length; i++)
             //{
-            //  arr[i] = Convert.ToInt32(Console.ReadLine());
+            //    rooms[i] = new Room();
+            //    Console.WriteLine($"Enter details for Room {i + 1}:");
+
+            //    Console.Write("Enter Room Number: ");
+            //    rooms[i].roomNumber = int.Parse(Console.ReadLine());
+
+            //    Console.Write("Single, Double, Suite: ");
+            //    rooms[i].roomType = Console.ReadLine();
+
+            //    Console.Write("Enter Price Per Night: ");
+            //    rooms[i].pricePerNight = double.Parse(Console.ReadLine());
+
+            //    Console.Write("Is the room booked? (yes/no): ");
+            //    string isBookedInput = Console.ReadLine().ToLower();
+            //    rooms[i].isBooked = (isBookedInput == "yes");
+
+            //    Console.WriteLine();
             //}
-            //Console.WriteLine(smallest(arr));
+
+            //Console.WriteLine("Room Details:");
+            //foreach (Room room in rooms)
+            //{
+            //    room.PrintRoomDetails();
+            //}
 
 
-
-            //3
-            //int num =Convert.ToInt32(Console.ReadLine());
-            //Console.WriteLine(fac(num));
-
-
-
-
-
-            //4
-            //Prime(Convert.ToInt32(Console.ReadLine()), Convert.ToInt32(Console.ReadLine()));
-
-
-
-
-            //5
-            //int[] numbers = new int[5];
-            //for (int i = 0; i < numbers.Length; i++)
-            //{ numbers[i] = Convert.ToInt32(Console.ReadLine()); }
-
-            //Console.WriteLine(largest(numbers));
-
-
-
-            //6
-            //pattern();
-
-
-
-
-
-            //7
-
-
-
-            Room[] rooms = new Room[2];
-            for (int i = 0; i < rooms.Length; i++)
-            {
-                rooms[i] = new Room();
-                Console.WriteLine($"Enter details for Room {i + 1}:");
-
-                Console.Write("Enter Room Number: ");
-                rooms[i].roomNumber = int.Parse(Console.ReadLine());
-
-                Console.Write("Enter Room Type (Single, Double, Suite): ");
-                rooms[i].roomType = Console.ReadLine();
-
-                Console.Write("Enter Price Per Night: ");
-                rooms[i].pricePerNight = double.Parse(Console.ReadLine());
-
-                Console.Write("Is the room booked? (yes/no): ");
-                string isBookedInput = Console.ReadLine().ToLower();
-                rooms[i].isBooked = (isBookedInput == "yes");
-
-                Console.WriteLine();
-            }
-
-            Console.WriteLine("Room Details:");
-            foreach (Room room in rooms)
-            {
-                room.PrintRoomDetails();
-            }
+            Room room = new Room();
+            Room room1 = new Room(1,"single",150,true);
+            room.PrintRoomDetails();
+            room1.PrintRoomDetails();
 
 
         }
