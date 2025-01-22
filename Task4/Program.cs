@@ -51,9 +51,17 @@ namespace Task4
             this.StudentID = id;
         }
 
+        public Student() //Defualt constructor
+        {
+            this.Name = "null";
+            this.Age = 0;
+            this.StudentID = 0;
+        }
+
         public void GetDetails() //print
         {
-            Console.WriteLine($"{studentId} , {name} , {Age}");
+            Console.WriteLine($"{studentId}\n  {name}\n  {Age}");
+            Console.WriteLine();
         }
 
 
@@ -75,7 +83,10 @@ namespace Task4
             Student s1=new Student("Ahmad",22,1001,"Email");
             s1.GetDetails();
 
-            Student s2 = new Student("mohammad", 22, 1002, "Email");
+            Student s3 = new Student("mohammad", 14, 1002, "Email");
+            s3.GetDetails();
+
+            Student s2 = new Student();
             s2.GetDetails();
 
         }
