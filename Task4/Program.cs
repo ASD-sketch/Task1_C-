@@ -33,7 +33,7 @@ namespace Task4
             get { return this.age; }
             set 
             { 
-                if (value>MinAge && value<MaxAge)
+                if (value>MinAge || value<MaxAge)
                 this.age = value; 
 
                 else
