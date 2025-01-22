@@ -13,13 +13,17 @@ namespace Task5_22_1_2025
          
         public void Start()
         {
-            Console.WriteLine("Vehicle is starting");
+            Console.WriteLine($"{Model} , {Brand}");
         }
     }
 
     class Car:Vehicle
     {
         public int NumberOfDoors { get; set; }
+        public void print()
+        {
+            Console.WriteLine($"{Model} , {Brand} ,{NumberOfDoors}");
+        }
     }
 
 
@@ -28,6 +32,11 @@ namespace Task5_22_1_2025
         static void Main(string[] args)
         {
             Car car = new Car();
+            car.Brand = "E200";
+            car.Model = "Mercedes";
+            car.NumberOfDoors = 4;
+            car.print();
+
         }
     }
 }
