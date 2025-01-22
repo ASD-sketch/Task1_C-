@@ -60,19 +60,22 @@ namespace task._3
 
         static int largest(int[] numbers)
         {
-           
-            int largest = numbers[0];
 
+            //int largest = numbers[0];
             
-            foreach (int number in numbers)
-            {
-                if (number > largest)
-                {
-                    largest = number;
-                }
-            }
+            Array.Sort (numbers);
 
-          return largest;
+            int largest = numbers[numbers.Length-2];
+
+            //foreach (int number in numbers)
+            //{
+            //    if (number > largest)
+            //    {
+            //        largest = number;
+            //    }
+            //}
+
+            return largest;
         }
 
 
@@ -151,51 +154,51 @@ namespace task._3
 
         static void Main(string[] args)
         {
-          // // 1
-          //  Console.WriteLine(OddEven(Convert.ToInt32(Console.ReadLine())));
+            // // 1
+            //  Console.WriteLine(OddEven(Convert.ToInt32(Console.ReadLine())));
 
 
-          // // 2
-          //  int[] arr = new int[5];
-          //  for (int i = 0; i < 5; i++)
-          //  {
-          //      arr[i] = Convert.ToInt32(Console.ReadLine());
-          //  }
-          //  Console.WriteLine(smallest(arr));
-
-
-
-          ////  3
-          //  int num = Convert.ToInt32(Console.ReadLine());
-          //  Console.WriteLine(fac(num));
+            // // 2
+            //  int[] arr = new int[5];
+            //  for (int i = 0; i < 5; i++)
+            //  {
+            //      arr[i] = Convert.ToInt32(Console.ReadLine());
+            //  }
+            //  Console.WriteLine(smallest(arr));
 
 
 
-
-
-          ////  4
-          //  prime();
-
-
-
-
-          // // 5
-          //  int[] numbers = new int[5];
-          //  for (int i = 0; i < numbers.Length; i++)
-          //  { numbers[i] = Convert.ToInt32(Console.ReadLine()); }
-
-          //  Console.WriteLine(largest(numbers));
-
-
-
-          // // 6
-          //  pattern();
+            ////  3
+            //  int num = Convert.ToInt32(Console.ReadLine());
+            //  Console.WriteLine(fac(num));
 
 
 
 
 
-           // 7
+            ////  4
+            //  prime();
+
+
+
+
+            // 5
+            int[] numbers = new int[5];
+            for (int i = 0; i < numbers.Length; i++)
+            { numbers[i] = Convert.ToInt32(Console.ReadLine()); }
+
+            Console.WriteLine(largest(numbers));
+
+
+
+            // // 6
+            //  pattern();
+
+
+
+
+
+            // 7
 
 
 
@@ -228,10 +231,10 @@ namespace task._3
             //}
 
 
-            Room room = new Room();
-            Room room1 = new Room(1,"single",150,true);
-            room.PrintRoomDetails();
-            room1.PrintRoomDetails();
+            //Room room = new Room();
+            //Room room1 = new Room(1,"single",150,true);
+            //room.PrintRoomDetails();
+            //room1.PrintRoomDetails();
 
 
         }
